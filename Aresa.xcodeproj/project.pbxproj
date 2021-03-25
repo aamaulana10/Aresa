@@ -14,7 +14,18 @@
 		FADB0023260C850F00FBC4A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADB0022260C850F00FBC4A0 /* Preview Assets.xcassets */; };
 		FADB0026260C850F00FBC4A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADB0024260C850F00FBC4A0 /* LaunchScreen.storyboard */; };
 		FADB002F260C86FF00FBC4A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = FADB002E260C86FF00FBC4A0 /* .travis.yml */; };
+		FADB0038260C890E00FBC4A0 /* AresaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB0037260C890E00FBC4A0 /* AresaTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FADB003A260C890E00FBC4A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FADB000E260C850C00FBC4A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FADB0015260C850C00FBC4A0;
+			remoteInfo = Aresa;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FADB0016260C850C00FBC4A0 /* Aresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,20 @@
 		FADB0025260C850F00FBC4A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FADB0027260C850F00FBC4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FADB002E260C86FF00FBC4A0 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
+		FADB0035260C890D00FBC4A0 /* AresaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FADB0037260C890E00FBC4A0 /* AresaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresaTests.swift; sourceTree = "<group>"; };
+		FADB0039260C890E00FBC4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FADB0013260C850C00FBC4A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FADB0032260C890D00FBC4A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +65,7 @@
 			children = (
 				FADB002E260C86FF00FBC4A0 /* .travis.yml */,
 				FADB0018260C850C00FBC4A0 /* Aresa */,
+				FADB0036260C890E00FBC4A0 /* AresaTests */,
 				FADB0017260C850C00FBC4A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				FADB0016260C850C00FBC4A0 /* Aresa.app */,
+				FADB0035260C890D00FBC4A0 /* AresaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +101,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FADB0036260C890E00FBC4A0 /* AresaTests */ = {
+			isa = PBXGroup;
+			children = (
+				FADB0037260C890E00FBC4A0 /* AresaTests.swift */,
+				FADB0039260C890E00FBC4A0 /* Info.plist */,
+			);
+			path = AresaTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,6 +130,24 @@
 			productReference = FADB0016260C850C00FBC4A0 /* Aresa.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FADB0034260C890D00FBC4A0 /* AresaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FADB003C260C890E00FBC4A0 /* Build configuration list for PBXNativeTarget "AresaTests" */;
+			buildPhases = (
+				FADB0031260C890D00FBC4A0 /* Sources */,
+				FADB0032260C890D00FBC4A0 /* Frameworks */,
+				FADB0033260C890D00FBC4A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FADB003B260C890E00FBC4A0 /* PBXTargetDependency */,
+			);
+			name = AresaTests;
+			productName = AresaTests;
+			productReference = FADB0035260C890D00FBC4A0 /* AresaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -109,6 +159,10 @@
 				TargetAttributes = {
 					FADB0015260C850C00FBC4A0 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					FADB0034260C890D00FBC4A0 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = FADB0015260C850C00FBC4A0;
 					};
 				};
 			};
@@ -126,6 +180,7 @@
 			projectRoot = "";
 			targets = (
 				FADB0015260C850C00FBC4A0 /* Aresa */,
+				FADB0034260C890D00FBC4A0 /* AresaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +197,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FADB0033260C890D00FBC4A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -155,7 +217,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FADB0031260C890D00FBC4A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FADB0038260C890E00FBC4A0 /* AresaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FADB003B260C890E00FBC4A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FADB0015260C850C00FBC4A0 /* Aresa */;
+			targetProxy = FADB003A260C890E00FBC4A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FADB0024260C850F00FBC4A0 /* LaunchScreen.storyboard */ = {
@@ -327,6 +405,46 @@
 			};
 			name = Release;
 		};
+		FADB003D260C890E00FBC4A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W59APR6U5A;
+				INFOPLIST_FILE = AresaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aamaulana10.AresaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aresa.app/Aresa";
+			};
+			name = Debug;
+		};
+		FADB003E260C890E00FBC4A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W59APR6U5A;
+				INFOPLIST_FILE = AresaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aamaulana10.AresaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aresa.app/Aresa";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -344,6 +462,15 @@
 			buildConfigurations = (
 				FADB002B260C850F00FBC4A0 /* Debug */,
 				FADB002C260C850F00FBC4A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FADB003C260C890E00FBC4A0 /* Build configuration list for PBXNativeTarget "AresaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FADB003D260C890E00FBC4A0 /* Debug */,
+				FADB003E260C890E00FBC4A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
