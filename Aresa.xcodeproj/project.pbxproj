@@ -82,12 +82,10 @@
 		FADB0018260C850C00FBC4A0 /* Aresa */ = {
 			isa = PBXGroup;
 			children = (
-				FADB0019260C850C00FBC4A0 /* AppDelegate.swift */,
-				FADB001B260C850C00FBC4A0 /* SceneDelegate.swift */,
-				FADB001D260C850C00FBC4A0 /* ContentView.swift */,
-				FADB001F260C850F00FBC4A0 /* Assets.xcassets */,
-				FADB0024260C850F00FBC4A0 /* LaunchScreen.storyboard */,
-				FADB0027260C850F00FBC4A0 /* Info.plist */,
+				FADB0047260C8A7700FBC4A0 /* SupportingFiles */,
+				FADB0046260C8A6F00FBC4A0 /* Module */,
+				FADB0045260C89F300FBC4A0 /* App */,
+				FADB0044260C89EB00FBC4A0 /* Core */,
 				FADB0021260C850F00FBC4A0 /* Preview Content */,
 			);
 			path = Aresa;
@@ -108,6 +106,40 @@
 				FADB0039260C890E00FBC4A0 /* Info.plist */,
 			);
 			path = AresaTests;
+			sourceTree = "<group>";
+		};
+		FADB0044260C89EB00FBC4A0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FADB0045260C89F300FBC4A0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FADB0019260C850C00FBC4A0 /* AppDelegate.swift */,
+				FADB001B260C850C00FBC4A0 /* SceneDelegate.swift */,
+				FADB001D260C850C00FBC4A0 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FADB0046260C8A6F00FBC4A0 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		FADB0047260C8A7700FBC4A0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FADB0024260C850F00FBC4A0 /* LaunchScreen.storyboard */,
+				FADB0027260C850F00FBC4A0 /* Info.plist */,
+				FADB001F260C850F00FBC4A0 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +405,7 @@
 				DEVELOPMENT_TEAM = W59APR6U5A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Aresa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +427,7 @@
 				DEVELOPMENT_TEAM = W59APR6U5A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Aresa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,7 +445,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W59APR6U5A;
-				INFOPLIST_FILE = AresaTests/Info.plist;
+				INFOPLIST_FILE = AresaTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,7 +465,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W59APR6U5A;
-				INFOPLIST_FILE = AresaTests/Info.plist;
+				INFOPLIST_FILE = AresaTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
