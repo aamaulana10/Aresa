@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		FADB0026260C850F00FBC4A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADB0024260C850F00FBC4A0 /* LaunchScreen.storyboard */; };
 		FADB002F260C86FF00FBC4A0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = FADB002E260C86FF00FBC4A0 /* .travis.yml */; };
 		FADB0038260C890E00FBC4A0 /* AresaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB0037260C890E00FBC4A0 /* AresaTests.swift */; };
+		FADB0054260C8DC800FBC4A0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FADB0053260C8DC800FBC4A0 /* Alamofire */; };
+		FADB0059260C8F1B00FBC4A0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FADB0058260C8F1B00FBC4A0 /* Realm */; };
+		FADB005B260C8F1B00FBC4A0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FADB005A260C8F1B00FBC4A0 /* RealmSwift */; };
+		FADB0060260C8FB400FBC4A0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FADB005F260C8FB400FBC4A0 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADB0060260C8FB400FBC4A0 /* SDWebImageSwiftUI in Frameworks */,
+				FADB005B260C8F1B00FBC4A0 /* RealmSwift in Frameworks */,
+				FADB0059260C8F1B00FBC4A0 /* Realm in Frameworks */,
+				FADB0054260C8DC800FBC4A0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +119,10 @@
 		FADB0044260C89EB00FBC4A0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FADB0051260C8CBA00FBC4A0 /* Utils */,
+				FADB0050260C8CB300FBC4A0 /* Domain */,
+				FADB004F260C8CAC00FBC4A0 /* Data */,
+				FADB004E260C8CA600FBC4A0 /* DI */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -142,6 +154,34 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		FADB004E260C8CA600FBC4A0 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		FADB004F260C8CAC00FBC4A0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FADB0050260C8CB300FBC4A0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FADB0051260C8CBA00FBC4A0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +198,12 @@
 			dependencies = (
 			);
 			name = Aresa;
+			packageProductDependencies = (
+				FADB0053260C8DC800FBC4A0 /* Alamofire */,
+				FADB0058260C8F1B00FBC4A0 /* Realm */,
+				FADB005A260C8F1B00FBC4A0 /* RealmSwift */,
+				FADB005F260C8FB400FBC4A0 /* SDWebImageSwiftUI */,
+			);
 			productName = Aresa;
 			productReference = FADB0016260C850C00FBC4A0 /* Aresa.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +253,11 @@
 				Base,
 			);
 			mainGroup = FADB000D260C850C00FBC4A0;
+			packageReferences = (
+				FADB0052260C8DC800FBC4A0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FADB0057260C8F1B00FBC4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				FADB005E260C8FB400FBC4A0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = FADB0017260C850C00FBC4A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -385,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -456,6 +507,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aresa.app/Aresa";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
@@ -476,6 +528,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aresa.app/Aresa";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Release;
 		};
@@ -510,6 +563,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FADB0052260C8DC800FBC4A0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+		FADB0057260C8F1B00FBC4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.2;
+			};
+		};
+		FADB005E260C8FB400FBC4A0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FADB0053260C8DC800FBC4A0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB0052260C8DC800FBC4A0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FADB0058260C8F1B00FBC4A0 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB0057260C8F1B00FBC4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		FADB005A260C8F1B00FBC4A0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB0057260C8F1B00FBC4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		FADB005F260C8FB400FBC4A0 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB005E260C8FB400FBC4A0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FADB000E260C850C00FBC4A0 /* Project object */;
 }
