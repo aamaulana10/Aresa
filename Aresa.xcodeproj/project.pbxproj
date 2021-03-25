@@ -455,7 +455,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Aresa/Preview Content\"";
 				DEVELOPMENT_TEAM = W59APR6U5A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Aresa/Info.plist;
+				INFOPLIST_FILE = Aresa/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -477,7 +477,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Aresa/Preview Content\"";
 				DEVELOPMENT_TEAM = W59APR6U5A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Aresa/Info.plist;
+				INFOPLIST_FILE = Aresa/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
