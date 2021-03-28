@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2736A1260DBFF400383ECA /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736A0260DBFF400383ECA /* GameEntity.swift */; };
+		FA2736AB260DC17A00383ECA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736AA260DC17A00383ECA /* GameModel.swift */; };
+		FA2736B1260DC84000383ECA /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736B0260DC84000383ECA /* RemoteDataSource.swift */; };
+		FA2736B8260DC8C800383ECA /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736B7260DC8C800383ECA /* ApiCall.swift */; };
+		FA2736BC260DCD0C00383ECA /* CustomError+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736BB260DCD0C00383ECA /* CustomError+Ext.swift */; };
+		FA2736C0260DCD5200383ECA /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736BF260DCD5200383ECA /* LocaleDataSource.swift */; };
+		FA2736C4260DCDB400383ECA /* GameFavoritEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736C3260DCDB400383ECA /* GameFavoritEntity.swift */; };
+		FA2736C8260DCE1800383ECA /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736C7260DCE1800383ECA /* UserEntity.swift */; };
+		FA2736CC260DCE5C00383ECA /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736CB260DCE5C00383ECA /* Realm+Ext.swift */; };
+		FA2736D0260DCEC700383ECA /* GameFavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736CF260DCEC700383ECA /* GameFavoriteModel.swift */; };
+		FA2736D4260DCEDE00383ECA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736D3260DCEDE00383ECA /* UserModel.swift */; };
+		FA2736D8260DCF1100383ECA /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736D7260DCF1100383ECA /* GameMapper.swift */; };
 		FADB001A260C850C00FBC4A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB0019260C850C00FBC4A0 /* AppDelegate.swift */; };
 		FADB001C260C850C00FBC4A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB001B260C850C00FBC4A0 /* SceneDelegate.swift */; };
 		FADB001E260C850C00FBC4A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB001D260C850C00FBC4A0 /* ContentView.swift */; };
@@ -19,6 +31,8 @@
 		FADB0059260C8F1B00FBC4A0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FADB0058260C8F1B00FBC4A0 /* Realm */; };
 		FADB005B260C8F1B00FBC4A0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FADB005A260C8F1B00FBC4A0 /* RealmSwift */; };
 		FADB0060260C8FB400FBC4A0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FADB005F260C8FB400FBC4A0 /* SDWebImageSwiftUI */; };
+		FAE9EB7A260CA3CF0041512F /* GameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9EB79260CA3CF0041512F /* GameResponse.swift */; };
+		FAE9EB80260CA4390041512F /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9EB7F260CA4390041512F /* GameRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA2736A0260DBFF400383ECA /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
+		FA2736AA260DC17A00383ECA /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		FA2736B0260DC84000383ECA /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		FA2736B7260DC8C800383ECA /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		FA2736BB260DCD0C00383ECA /* CustomError+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomError+Ext.swift"; sourceTree = "<group>"; };
+		FA2736BF260DCD5200383ECA /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
+		FA2736C3260DCDB400383ECA /* GameFavoritEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoritEntity.swift; sourceTree = "<group>"; };
+		FA2736C7260DCE1800383ECA /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		FA2736CB260DCE5C00383ECA /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
+		FA2736CF260DCEC700383ECA /* GameFavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteModel.swift; sourceTree = "<group>"; };
+		FA2736D3260DCEDE00383ECA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FA2736D7260DCF1100383ECA /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
 		FADB0016260C850C00FBC4A0 /* Aresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB0019260C850C00FBC4A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADB001B260C850C00FBC4A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +70,8 @@
 		FADB0035260C890D00FBC4A0 /* AresaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB0037260C890E00FBC4A0 /* AresaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresaTests.swift; sourceTree = "<group>"; };
 		FADB0039260C890E00FBC4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE9EB79260CA3CF0041512F /* GameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResponse.swift; sourceTree = "<group>"; };
+		FAE9EB7F260CA4390041512F /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +96,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA27369F260DBFE500383ECA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FA2736A0260DBFF400383ECA /* GameEntity.swift */,
+				FA2736C3260DCDB400383ECA /* GameFavoritEntity.swift */,
+				FA2736C7260DCE1800383ECA /* UserEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FA2736A8260DC16300383ECA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA2736AA260DC17A00383ECA /* GameModel.swift */,
+				FA2736CF260DCEC700383ECA /* GameFavoriteModel.swift */,
+				FA2736D3260DCEDE00383ECA /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA2736A9260DC16C00383ECA /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FA2736B4260DC8A800383ECA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA2736B7260DC8C800383ECA /* ApiCall.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA2736B5260DC8B100383ECA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA2736BB260DCD0C00383ECA /* CustomError+Ext.swift */,
+				FA2736CB260DCE5C00383ECA /* Realm+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FA2736B6260DC8B700383ECA /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				FA2736D7260DCF1100383ECA /* GameMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		FADB000D260C850C00FBC4A0 = {
 			isa = PBXGroup;
 			children = (
@@ -90,11 +170,11 @@
 		FADB0018260C850C00FBC4A0 /* Aresa */ = {
 			isa = PBXGroup;
 			children = (
-				FADB0047260C8A7700FBC4A0 /* SupportingFiles */,
-				FADB0046260C8A6F00FBC4A0 /* Module */,
 				FADB0045260C89F300FBC4A0 /* App */,
 				FADB0044260C89EB00FBC4A0 /* Core */,
+				FADB0046260C8A6F00FBC4A0 /* Module */,
 				FADB0021260C850F00FBC4A0 /* Preview Content */,
+				FADB0047260C8A7700FBC4A0 /* SupportingFiles */,
 			);
 			path = Aresa;
 			sourceTree = "<group>";
@@ -164,6 +244,9 @@
 		FADB004F260C8CAC00FBC4A0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FAE9EB77260C9ED60041512F /* Remote */,
+				FAE9EB76260C9ED00041512F /* Locale */,
+				FAE9EB7F260CA4390041512F /* GameRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -171,6 +254,8 @@
 		FADB0050260C8CB300FBC4A0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FA2736A9260DC16C00383ECA /* UseCase */,
+				FA2736A8260DC16300383ECA /* Model */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -178,8 +263,37 @@
 		FADB0051260C8CBA00FBC4A0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FA2736B6260DC8B700383ECA /* Mapper */,
+				FA2736B5260DC8B100383ECA /* Extension */,
+				FA2736B4260DC8A800383ECA /* Network */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FAE9EB76260C9ED00041512F /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				FA27369F260DBFE500383ECA /* Entity */,
+				FA2736BF260DCD5200383ECA /* LocaleDataSource.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		FAE9EB77260C9ED60041512F /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				FAE9EB78260C9EE40041512F /* Response */,
+				FA2736B0260DC84000383ECA /* RemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		FAE9EB78260C9EE40041512F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FAE9EB79260CA3CF0041512F /* GameResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +408,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2736B1260DC84000383ECA /* RemoteDataSource.swift in Sources */,
+				FA2736BC260DCD0C00383ECA /* CustomError+Ext.swift in Sources */,
 				FADB001A260C850C00FBC4A0 /* AppDelegate.swift in Sources */,
+				FA2736C0260DCD5200383ECA /* LocaleDataSource.swift in Sources */,
 				FADB001C260C850C00FBC4A0 /* SceneDelegate.swift in Sources */,
+				FA2736D0260DCEC700383ECA /* GameFavoriteModel.swift in Sources */,
+				FAE9EB80260CA4390041512F /* GameRepository.swift in Sources */,
+				FAE9EB7A260CA3CF0041512F /* GameResponse.swift in Sources */,
+				FA2736A1260DBFF400383ECA /* GameEntity.swift in Sources */,
+				FA2736C8260DCE1800383ECA /* UserEntity.swift in Sources */,
+				FA2736D8260DCF1100383ECA /* GameMapper.swift in Sources */,
+				FA2736D4260DCEDE00383ECA /* UserModel.swift in Sources */,
+				FA2736CC260DCE5C00383ECA /* Realm+Ext.swift in Sources */,
+				FA2736C4260DCDB400383ECA /* GameFavoritEntity.swift in Sources */,
+				FA2736AB260DC17A00383ECA /* GameModel.swift in Sources */,
+				FA2736B8260DC8C800383ECA /* ApiCall.swift in Sources */,
 				FADB001E260C850C00FBC4A0 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,7 +624,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W59APR6U5A;
-				INFOPLIST_FILE = AresaTests/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = AresaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,7 +645,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W59APR6U5A;
-				INFOPLIST_FILE = AresaTests/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = AresaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
