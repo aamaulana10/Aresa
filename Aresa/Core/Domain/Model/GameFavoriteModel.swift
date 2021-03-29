@@ -12,22 +12,22 @@ struct GameFavoriteModel: Codable, Identifiable {
   let backgroundImage : String?
   let clip : String?
   let dominantColor : String?
-  let genres : [GenreModel]?
+  var genres : [GenreModel] = []
   let id : Int?
   let metacritic : Int?
   let name : String?
-  let platforms : [PlatformModel]?
+  var platforms : [PlatformModel] = []
   let playtime : Int?
   let rating : Float?
   let ratingTop : Int?
-  let ratings : [RatingsModel]?
+  var ratings : [RatingsModel] = []
   let ratingsCount : Int?
   let released : String?
   let reviewsCount : Int?
   let reviewsTextCount : Int?
   let saturatedColor : String?
-  let shortScreenshots : [ShortScreenshotModel]?
+  var shortScreenshots : [ShortScreenshotModel] = []
   let slug : String?
-  let stores : [StoreModel]?
+  var stores : [StoreModel] = []
   let updated : String?
 }

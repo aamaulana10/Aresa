@@ -16,19 +16,19 @@ struct GameModel: Codable, Identifiable {
   let id : Int?
   let metacritic : Int?
   let name : String?
-  let platforms : [PlatformModel]
+  var platforms : [PlatformModel] = []
   let playtime : Int?
   let rating : Float?
   let ratingTop : Int?
-  let ratings : [RatingsModel]
+  var ratings : [RatingsModel] = []
   let ratingsCount : Int?
   let released : String?
   let reviewsCount : Int?
   let reviewsTextCount : Int?
   let saturatedColor : String?
-  let shortScreenshots : [ShortScreenshotModel]
+  var shortScreenshots : [ShortScreenshotModel] = []
   let slug : String?
-  let stores : [StoreModel]
+  var stores : [StoreModel] = []
   let updated : String?
 }
 
@@ -50,8 +50,6 @@ struct PlatformModel: Codable {
   let imageBackground : String?
   let name : String?
   let slug : String?
-  let yearEnd : String?
-  let yearStart : String?
 }
 
 struct RatingsModel: Codable {

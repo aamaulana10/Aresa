@@ -30,7 +30,6 @@ class GameEntity: Object, Identifiable {
   var ratings = List<RatingsEntity>()
   var shortScreenshots = List<ShortScreenshotEntity>()
   var genres       =  List<GenreEntity>()
-  var parentPlatforms = List<ParentPlatformEntity>()
   var platforms = List<PlatformEntity>()
     
     override static func primaryKey() -> String? {
@@ -50,11 +49,6 @@ class GenreEntity: Object {
   
 }
 
-class ParentPlatformEntity: Object {
-  
-  var platform : PlatformEntity?
-}
-
 class PlatformEntity: Object {
   
   @objc dynamic var gamesCount : Int = 0
@@ -63,8 +57,6 @@ class PlatformEntity: Object {
   @objc dynamic var imageBackground : String = ""
   @objc dynamic var name : String = ""
   @objc dynamic var slug : String = ""
-  @objc dynamic var yearEnd : String = ""
-  @objc dynamic var yearStart : String = ""
 }
 
 class RatingsEntity: Object {

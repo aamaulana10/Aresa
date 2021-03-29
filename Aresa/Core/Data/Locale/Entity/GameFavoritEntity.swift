@@ -30,7 +30,6 @@ class GameFavoriteEntity: Object, Identifiable {
   var ratings = List<RatingsEntity>()
   var shortScreenshots = List<ShortScreenshotEntity>()
   var genres       =  List<GenreEntity>()
-  var parentPlatforms = List<ParentPlatformEntity>()
   var platforms = List<PlatformEntity>()
     
     override static func primaryKey() -> String? {

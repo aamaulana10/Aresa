@@ -19,6 +19,18 @@
 		FA2736D0260DCEC700383ECA /* GameFavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736CF260DCEC700383ECA /* GameFavoriteModel.swift */; };
 		FA2736D4260DCEDE00383ECA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736D3260DCEDE00383ECA /* UserModel.swift */; };
 		FA2736D8260DCF1100383ECA /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2736D7260DCF1100383ECA /* GameMapper.swift */; };
+		FA9CE6422611A9C50065EC19 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6412611A9C50065EC19 /* Injection.swift */; };
+		FA9CE6462611A9DA0065EC19 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6452611A9DA0065EC19 /* HomeInteractor.swift */; };
+		FA9CE64A2611AA3F0065EC19 /* Detailinteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6492611AA3F0065EC19 /* Detailinteractor.swift */; };
+		FA9CE64E2611AA7B0065EC19 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE64D2611AA7A0065EC19 /* FavoriteInteractor.swift */; };
+		FA9CE6522611AAEA0065EC19 /* HomeInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6512611AAEA0065EC19 /* HomeInteractorMock.swift */; };
+		FA9CE6562611AB2E0065EC19 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6552611AB2E0065EC19 /* UserInteractor.swift */; };
+		FA9CE65E2611AB7E0065EC19 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE65D2611AB7E0065EC19 /* HomePresenter.swift */; };
+		FA9CE6622611AC210065EC19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6612611AC210065EC19 /* HomeView.swift */; };
+		FA9CE6682611C3E80065EC19 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6672611C3E80065EC19 /* HomeHeader.swift */; };
+		FA9CE66C2611C42D0065EC19 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE66B2611C42D0065EC19 /* Color+Ext.swift */; };
+		FA9CE6712611D9030065EC19 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6702611D9030065EC19 /* SearchBar.swift */; };
+		FA9CE6752611E3A50065EC19 /* HomePopularRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE6742611E3A50065EC19 /* HomePopularRow.swift */; };
 		FADB001A260C850C00FBC4A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB0019260C850C00FBC4A0 /* AppDelegate.swift */; };
 		FADB001C260C850C00FBC4A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB001B260C850C00FBC4A0 /* SceneDelegate.swift */; };
 		FADB001E260C850C00FBC4A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB001D260C850C00FBC4A0 /* ContentView.swift */; };
@@ -58,6 +70,18 @@
 		FA2736CF260DCEC700383ECA /* GameFavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteModel.swift; sourceTree = "<group>"; };
 		FA2736D3260DCEDE00383ECA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FA2736D7260DCF1100383ECA /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
+		FA9CE6412611A9C50065EC19 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		FA9CE6452611A9DA0065EC19 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FA9CE6492611AA3F0065EC19 /* Detailinteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detailinteractor.swift; sourceTree = "<group>"; };
+		FA9CE64D2611AA7A0065EC19 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		FA9CE6512611AAEA0065EC19 /* HomeInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorMock.swift; sourceTree = "<group>"; };
+		FA9CE6552611AB2E0065EC19 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		FA9CE65D2611AB7E0065EC19 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FA9CE6612611AC210065EC19 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FA9CE6672611C3E80065EC19 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		FA9CE66B2611C42D0065EC19 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		FA9CE6702611D9030065EC19 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		FA9CE6742611E3A50065EC19 /* HomePopularRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopularRow.swift; sourceTree = "<group>"; };
 		FADB0016260C850C00FBC4A0 /* Aresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADB0019260C850C00FBC4A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADB001B260C850C00FBC4A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +143,11 @@
 		FA2736A9260DC16C00383ECA /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CE6452611A9DA0065EC19 /* HomeInteractor.swift */,
+				FA9CE6512611AAEA0065EC19 /* HomeInteractorMock.swift */,
+				FA9CE6492611AA3F0065EC19 /* Detailinteractor.swift */,
+				FA9CE64D2611AA7A0065EC19 /* FavoriteInteractor.swift */,
+				FA9CE6552611AB2E0065EC19 /* UserInteractor.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -136,6 +165,7 @@
 			children = (
 				FA2736BB260DCD0C00383ECA /* CustomError+Ext.swift */,
 				FA2736CB260DCE5C00383ECA /* Realm+Ext.swift */,
+				FA9CE66B2611C42D0065EC19 /* Color+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -146,6 +176,49 @@
 				FA2736D7260DCF1100383ECA /* GameMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		FA9CE6592611AB520065EC19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CE65C2611AB670065EC19 /* View */,
+				FA9CE65B2611AB620065EC19 /* Router */,
+				FA9CE65A2611AB5C0065EC19 /* Presenter */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FA9CE65A2611AB5C0065EC19 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CE65D2611AB7E0065EC19 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA9CE65B2611AB620065EC19 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FA9CE65C2611AB670065EC19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CE6612611AC210065EC19 /* HomeView.swift */,
+				FA9CE6672611C3E80065EC19 /* HomeHeader.swift */,
+				FA9CE6742611E3A50065EC19 /* HomePopularRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA9CE66F2611D8F70065EC19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CE6702611D9030065EC19 /* SearchBar.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FADB000D260C850C00FBC4A0 = {
@@ -199,10 +272,10 @@
 		FADB0044260C89EB00FBC4A0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FADB0051260C8CBA00FBC4A0 /* Utils */,
-				FADB0050260C8CB300FBC4A0 /* Domain */,
 				FADB004F260C8CAC00FBC4A0 /* Data */,
+				FADB0050260C8CB300FBC4A0 /* Domain */,
 				FADB004E260C8CA600FBC4A0 /* DI */,
+				FADB0051260C8CBA00FBC4A0 /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -220,6 +293,7 @@
 		FADB0046260C8A6F00FBC4A0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CE6592611AB520065EC19 /* Home */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -237,6 +311,7 @@
 		FADB004E260C8CA600FBC4A0 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CE6412611A9C50065EC19 /* Injection.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -263,6 +338,7 @@
 		FADB0051260C8CBA00FBC4A0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CE66F2611D8F70065EC19 /* View */,
 				FA2736B6260DC8B700383ECA /* Mapper */,
 				FA2736B5260DC8B100383ECA /* Extension */,
 				FA2736B4260DC8A800383ECA /* Network */,
@@ -409,22 +485,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2736B1260DC84000383ECA /* RemoteDataSource.swift in Sources */,
+				FA9CE6462611A9DA0065EC19 /* HomeInteractor.swift in Sources */,
 				FA2736BC260DCD0C00383ECA /* CustomError+Ext.swift in Sources */,
+				FA9CE6622611AC210065EC19 /* HomeView.swift in Sources */,
 				FADB001A260C850C00FBC4A0 /* AppDelegate.swift in Sources */,
+				FA9CE6562611AB2E0065EC19 /* UserInteractor.swift in Sources */,
 				FA2736C0260DCD5200383ECA /* LocaleDataSource.swift in Sources */,
 				FADB001C260C850C00FBC4A0 /* SceneDelegate.swift in Sources */,
 				FA2736D0260DCEC700383ECA /* GameFavoriteModel.swift in Sources */,
 				FAE9EB80260CA4390041512F /* GameRepository.swift in Sources */,
 				FAE9EB7A260CA3CF0041512F /* GameResponse.swift in Sources */,
+				FA9CE6752611E3A50065EC19 /* HomePopularRow.swift in Sources */,
+				FA9CE66C2611C42D0065EC19 /* Color+Ext.swift in Sources */,
+				FA9CE6522611AAEA0065EC19 /* HomeInteractorMock.swift in Sources */,
 				FA2736A1260DBFF400383ECA /* GameEntity.swift in Sources */,
 				FA2736C8260DCE1800383ECA /* UserEntity.swift in Sources */,
+				FA9CE64E2611AA7B0065EC19 /* FavoriteInteractor.swift in Sources */,
 				FA2736D8260DCF1100383ECA /* GameMapper.swift in Sources */,
+				FA9CE65E2611AB7E0065EC19 /* HomePresenter.swift in Sources */,
 				FA2736D4260DCEDE00383ECA /* UserModel.swift in Sources */,
 				FA2736CC260DCE5C00383ECA /* Realm+Ext.swift in Sources */,
+				FA9CE6682611C3E80065EC19 /* HomeHeader.swift in Sources */,
+				FA9CE6712611D9030065EC19 /* SearchBar.swift in Sources */,
 				FA2736C4260DCDB400383ECA /* GameFavoritEntity.swift in Sources */,
 				FA2736AB260DC17A00383ECA /* GameModel.swift in Sources */,
+				FA9CE6422611A9C50065EC19 /* Injection.swift in Sources */,
 				FA2736B8260DC8C800383ECA /* ApiCall.swift in Sources */,
 				FADB001E260C850C00FBC4A0 /* ContentView.swift in Sources */,
+				FA9CE64A2611AA3F0065EC19 /* Detailinteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
