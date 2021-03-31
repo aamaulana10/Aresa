@@ -1,14 +1,14 @@
 //
-//  GameFavoritEntity.swift
+//  GameNewestEntity.swift
 //  Aresa
 //
-//  Created by aamaulana10 on 26/03/21.
+//  Created by aamaulana10 on 31/03/21.
 //
 
 import Foundation
 import RealmSwift
 
-class GameFavoriteEntity: Object, Identifiable {
+class GameNewestEntity: Object, Identifiable {
     
   @objc dynamic var backgroundImage: String = ""
   @objc dynamic var clip: String = ""

@@ -20,20 +20,20 @@ protocol DetailUseCase {
 class DetailInteractor: DetailUseCase {
     
     private let repository: GameRepositoryProtocol
-    private let Game: GameModel
+    private let game: GameModel
     
     required init(
         repository: GameRepositoryProtocol,
-        Game: GameModel
+        game: GameModel
     ) {
         
         self.repository = repository
-        self.Game = Game
+        self.game = game
     }
     
     func getGame() -> GameModel {
         
-        return Game
+        return game
     }
     
     func addToFavorite(data: GameFavoriteModel) -> AnyPublisher<Bool, Error> {

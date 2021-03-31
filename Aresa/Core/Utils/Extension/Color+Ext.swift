@@ -11,6 +11,9 @@ import SwiftUI
 extension Color {
   
   static var mainColor = Color(hex: "5E63F0")
+  static var racing    = Color(hex: "FC77A6")
+  static var strategy  = Color(hex: "4C95FF")
+  static var more      = Color(hex: "7B8BFB")
   
   static var random: Color {
     return Color(
@@ -44,7 +47,7 @@ extension Color {
       .sRGB,
       red: Double(r) / 255,
       green: Double(g) / 255,
-      blue:  Double(b) / 255,
+      blue: Double(b) / 255,
       opacity: Double(a) / 255
     )
   }

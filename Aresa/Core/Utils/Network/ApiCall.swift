@@ -15,8 +15,18 @@ struct API {
 
 extension API {
   
-  static func getGameByPage(page:Int, pageSize:Int) -> String {
+  static func getHighlightGameByPage(page: Int, pageSize: Int) -> String {
     
     return "\(API.baseUrl)games?page=\(page)&page_size=\(pageSize)"
+  }
+  
+  static func getNewestGameByPage(page: Int, pageSize: Int) -> String {
+    
+    return "\(API.baseUrl)games?page=\(page)&page_size=\(pageSize)&ordering=released"
+  }
+  
+  static func searchGameByPage(page: Int, pageSize: Int, query: String) -> String {
+    
+    return "\(API.baseUrl)games?page=\(page)&page_size=\(pageSize)&search=\(query)"
   }
 }

@@ -11,8 +11,11 @@ import Combine
 
 protocol LocaleDataSourceProtocol: class {
     
-    func getGame() -> AnyPublisher<[GameEntity], Error>
+    func getHighlightGame() -> AnyPublisher<[GameEntity], Error>
     func addGame(from Games: [GameEntity]) -> AnyPublisher<Bool, Error>
+  
+    func getNewestGame() -> AnyPublisher<[GameNewestEntity], Error>
+    func addNewestGame(from Games: [GameNewestEntity]) -> AnyPublisher<Bool, Error>
     
     func addToFavorit(from favorit: GameFavoriteEntity) -> AnyPublisher<Bool, Error>
     func deleteFromFavorit(from favorit: GameFavoriteEntity) -> AnyPublisher<Bool, Error>
@@ -37,7 +40,7 @@ final class LocaleDataSource: NSObject {
 
 extension LocaleDataSource: LocaleDataSourceProtocol {
     
-    func getGame() -> AnyPublisher<[GameEntity], Error> {
+    func getHighlightGame() -> AnyPublisher<[GameEntity], Error> {
         
         return Future<[GameEntity], Error> { completion in
             if let realm = self.realm {
@@ -74,6 +77,44 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
+  
+  func getNewestGame() -> AnyPublisher<[GameNewestEntity], Error> {
+      
+      return Future<[GameNewestEntity], Error> { completion in
+          if let realm = self.realm {
+              let Games: Results<GameNewestEntity> = {
+                  realm.objects(GameNewestEntity.self)
+                      .sorted(byKeyPath: "name", ascending: true)
+              }()
+              
+              completion(.success(Games.toArray(ofType: GameNewestEntity.self)))
+          } else {
+              completion(.failure(DatabaseError.invalidInstance))
+          }
+      }.eraseToAnyPublisher()
+  }
+  
+  func addNewestGame(
+      from Game: [GameNewestEntity]
+  ) -> AnyPublisher<Bool, Error> {
+      
+      return Future<Bool, Error> { completion in
+          if let realm = self.realm {
+              do {
+                  try realm.write {
+                      for Game in Game {
+                          realm.add(Game, update: .all)
+                      }
+                      completion(.success(true))
+                  }
+              } catch {
+                  completion(.failure(DatabaseError.requestFailed))
+              }
+          } else {
+              completion(.failure(DatabaseError.invalidInstance))
+          }
+      }.eraseToAnyPublisher()
+  }
     
     func addToFavorit(
         from favorit: GameFavoriteEntity

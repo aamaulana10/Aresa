@@ -7,23 +7,21 @@
 
 import SwiftUI
 
-struct HomeHeader: View {
+extension HomeView {
   
-  let size = UIScreen.main.bounds
-  @State private var placeSearchText = ""
-  
-  var body: some View {
+  var HomeHeader: some View {
     VStack {
       
       HStack {
         
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
           Text("Welcome,")
             .foregroundColor(.white)
-            .font(.largeTitle)
+            .font(.custom("Arial Rounded MT Bold", size: 36.0))
             .bold()
           Text("What would you like to find?")
             .foregroundColor(.white)
+            .font(.system(size: 14))
         }
         Spacer()
         Image(systemName: "square.and.pencil")
@@ -31,8 +29,7 @@ struct HomeHeader: View {
       }.padding()
       
       SearchBar(placeSearchText: $placeSearchText)
-      
-      
+            
     }.frame(minWidth: 0,
             maxWidth: size.width,
             minHeight: 0,
@@ -40,11 +37,5 @@ struct HomeHeader: View {
             alignment: .leading
      )
     .background(Color.mainColor)
-  }
-}
-
-struct HomeHeader_Previews: PreviewProvider {
-  static var previews: some View {
-    HomeHeader()
   }
 }

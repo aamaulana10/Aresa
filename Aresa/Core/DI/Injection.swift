@@ -33,11 +33,11 @@ final class Injection: NSObject {
     return HomeInteractorMock(repository: repository)
   }
   
-  func provideDetail(Game: GameModel) -> DetailUseCase {
+  func provideDetail(game: GameModel) -> DetailUseCase {
     
     let repository = provideRepository()
     
-    return DetailInteractor(repository: repository, Game: Game)
+    return DetailInteractor(repository: repository, game: game)
   }
   
   func provideFavourite() -> FavouriteUseCase {

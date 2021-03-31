@@ -9,41 +9,40 @@ import Foundation
 
 struct GameResponse: Codable {
   
-  let results : [GameModelResponse]
+  let results: [GameModelResponse]
 }
 
 struct GameModelResponse: Codable {
   
-  let backgroundImage : String?
-  let clip : GameClipResponse
-  let dominantColor : String?
-  let genres : [GenreResponse]
-  let id : Int?
-  let metacritic : Int?
-  let name : String?
-  let platforms : [PlatformResponse]
-  let playtime : Int?
-  let rating : Float?
-  let ratingTop : Int?
-  let ratings : [RatingsResponse]
-  let ratingsCount : Int?
-  let released : String?
-  let reviewsCount : Int?
-  let reviewsTextCount : Int?
-  let saturatedColor : String?
-  let shortScreenshots : [ShortScreenshotResponse]
-  let slug : String?
-  let stores : [StoreResponse]
-  let updated : String?
-  
-  
+  let backgroundImage: String?
+  let clip: GameClipResponse?
+  let dominantColor: String?
+  let genres: [GenreResponse]?
+  let id: Int?
+  let added: Int?
+  let name: String?
+  let platforms: [PlatformResponse]?
+  let playtime: Int?
+  let rating: Float?
+  let ratingTop: Int?
+  let ratings: [RatingsResponse]?
+  let ratingsCount: Int?
+  let released: String?
+  let reviewsCount: Int?
+  let reviewsTextCount: Int?
+  let saturatedColor: String?
+  let shortScreenshots: [ShortScreenshotResponse]?
+  let slug: String?
+  let stores: [StoreResponse]
+  let updated: String?
+    
   enum CodingKeys: String, CodingKey {
     case backgroundImage = "background_image"
     case clip = "clip"
     case dominantColor = "dominant_color"
     case genres = "genres"
     case id = "id"
-    case metacritic = "metacritic"
+    case added = "added"
     case name = "name"
     case platforms = "platforms"
     case playtime = "playtime"
@@ -65,17 +64,17 @@ struct GameModelResponse: Codable {
 
 struct GameClipResponse: Codable {
   
-  let clip : String
+  let clip: String
   
 }
 
 struct GenreResponse: Codable {
   
-  let gamesCount : Int?
-  let id : Int?
-  let imageBackground : String?
-  let name : String?
-  let slug : String?
+  let gamesCount: Int?
+  let id: Int?
+  let imageBackground: String?
+  let name: String?
+  let slug: String?
   
   enum CodingKeys: String, CodingKey {
     case gamesCount = "games_count"
@@ -89,19 +88,18 @@ struct GenreResponse: Codable {
 
 struct PlatformResponse: Codable {
    
-  let platform : PlatformModelResponse?
+  let platform: PlatformModelResponse?
 }
 
 struct PlatformModelResponse: Codable {
   
-  let gamesCount : Int?
-  let id : Int?
-  let image : String?
-  let imageBackground : String?
-  let name : String?
-  let slug : String?
-  
-  
+  let gamesCount: Int?
+  let id: Int?
+  let image: String?
+  let imageBackground: String?
+  let name: String?
+  let slug: String?
+    
   enum CodingKeys: String, CodingKey {
     case gamesCount = "games_count"
     case id = "id"
@@ -114,33 +112,33 @@ struct PlatformModelResponse: Codable {
 
 struct RatingsResponse: Codable {
   
-  let count : Int?
-  let id : Int?
-  let percent : Float?
-  let title : String?
+  let count: Int?
+  let id: Int?
+  let percent: Float?
+  let title: String?
 }
 
 struct ShortScreenshotResponse: Codable {
   
-  let id : Int?
-  let image : String?
+  let id: Int?
+  let image: String?
   
 }
 
 struct StoreResponse: Codable {
   
-  let id : Int?
-  let store : StoreModelResponse?
+  let id: Int?
+  let store: StoreModelResponse?
 }
 
 struct StoreModelResponse: Codable {
   
-  let domain : String?
-  let gamesCount : Int?
-  let id : Int?
-  let imageBackground : String?
-  let name : String?
-  let slug : String?
+  let domain: String?
+  let gamesCount: Int?
+  let id: Int?
+  let imageBackground: String?
+  let name: String?
+  let slug: String?
   
   enum CodingKeys: String, CodingKey {
     case domain = "domain"

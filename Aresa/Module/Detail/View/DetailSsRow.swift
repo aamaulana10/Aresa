@@ -1,17 +1,17 @@
 //
-//  HomePopularRow.swift
+//  DetailSsRow.swift
 //  Aresa
 //
-//  Created by aamaulana10 on 29/03/21.
+//  Created by aamaulana10 on 31/03/21.
 //
 
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct HomePopularRow: View {
+struct DetailSsRow: View {
   
-  var game: GameModel
-  var presenter: HomePresenter
+  var screenshoot: ShortScreenshotModel
+  var presenter: DetailPresenter
   
   let size = UIScreen.main.bounds
   
@@ -19,7 +19,7 @@ struct HomePopularRow: View {
         
       VStack {
         
-        WebImage(url: URL(string: game.backgroundImage ?? ""))
+        WebImage(url: URL(string: screenshoot.image ?? ""))
             .resizable()
             .indicator(.activity)
             .transition(.fade(duration: 0.5))

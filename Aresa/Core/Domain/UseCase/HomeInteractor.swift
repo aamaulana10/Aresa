@@ -9,23 +9,28 @@ import Foundation
 import Combine
 
 protocol HomeUseCase {
-    
-    func getGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
-    
+  
+  func getHighlightGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
+  func getNewestGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
 }
 
 class HomeInteractor: HomeUseCase {
+  
+  private let repository: GameRepositoryProtocol
+  
+  required init(repository: GameRepositoryProtocol) {
     
-    private let repository: GameRepositoryProtocol
+    self.repository = repository
+  }
+  
+  func getHighlightGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
     
-    required init(repository: GameRepositoryProtocol) {
-       
-        self.repository = repository
-    }
+    return repository.getHighlightGame(page: page, pageSize: pageSize)
+  }
+  
+  func getNewestGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
     
-    func getGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
-       
-        return repository.getGame(page: page, pageSize: pageSize)
-    }
-    
+    return repository.getNewestGame(page: page, pageSize: pageSize)
+  }
+  
 }

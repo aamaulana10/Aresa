@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
   
   @ObservedObject var presenter: HomePresenter
+  @State var placeSearchText = ""
+  
   let size = UIScreen.main.bounds
   
   var body: some View {
@@ -20,20 +22,23 @@ struct HomeView: View {
         VStack {
           ProgressView("Loading...")
         }
-      }else {
-        
+      } else {
         ScrollView(.vertical, showsIndicators: false) {
-          HomeHeader()
+          HomeHeader
             .frame(height: 300)
           categories
-          popular
+          byHighlight
+          byNewest
         }
       }
+      Spacer()
     }.onAppear {
       
-      presenter.getGame()
+      presenter.getHighlightGame()
+      presenter.getNewestGame(isLoadMore: false)
     }
-    
+    .edgesIgnoringSafeArea(.top)
+    .navigationBarHidden(true)
   }
 }
 
@@ -52,8 +57,12 @@ extension HomeView {
             
             VStack {
               
-              Image(systemName: "number.circle")
-                .scaledToFill()
+              Image("Arcade")
+                .resizable()
+                .frame(
+                  width: 40,
+                  height: 40
+                )
                 .padding()
               
             }
@@ -64,8 +73,7 @@ extension HomeView {
             
             Text("Arcade")
               .foregroundColor(.black)
-              .font(.system(size: 14))
-              .fontWeight(.medium)
+              .font(.system(size: 13))
           }
           
         }
@@ -77,20 +85,23 @@ extension HomeView {
             
             VStack {
               
-              Image(systemName: "number.circle")
-                .scaledToFill()
+              Image("Racing")
+                .resizable()
+                .frame(
+                  width: 40,
+                  height: 40
+                )
                 .padding()
               
             }
             .foregroundColor(.white)
             .frame(width: 60, height: 60)
-            .background(Color.mainColor)
+            .background(Color.racing)
             .cornerRadius(8)
             
             Text("Racing")
               .foregroundColor(.black)
-              .font(.system(size: 14))
-              .fontWeight(.medium)
+              .font(.system(size: 13))
           }
           
         }
@@ -102,20 +113,23 @@ extension HomeView {
             
             VStack {
               
-              Image(systemName: "number.circle")
-                .scaledToFill()
+              Image("Strategy")
+                .resizable()
+                .frame(
+                  width: 40,
+                  height: 40
+                )
                 .padding()
               
             }
             .foregroundColor(.white)
             .frame(width: 60, height: 60)
-            .background(Color.mainColor)
+            .background(Color.strategy)
             .cornerRadius(8)
             
             Text("Strategy")
               .foregroundColor(.black)
-              .font(.system(size: 14))
-              .fontWeight(.medium)
+              .font(.system(size: 13))
           }
           
         }
@@ -127,20 +141,23 @@ extension HomeView {
             
             VStack {
               
-              Image(systemName: "number.circle")
-                .scaledToFill()
+              Image("More")
+                .resizable()
+                .frame(
+                  width: 40,
+                  height: 40
+                )
                 .padding()
               
             }
             .foregroundColor(.white)
             .frame(width: 60, height: 60)
-            .background(Color.mainColor)
+            .background(Color.more)
             .cornerRadius(8)
             
             Text("More")
               .foregroundColor(.black)
-              .font(.system(size: 14))
-              .fontWeight(.medium)
+              .font(.system(size: 13))
           }
           
         }
@@ -157,12 +174,12 @@ extension HomeView {
 
 extension HomeView {
   
-  var popular: some View {
+  var byHighlight: some View {
     
     VStack(alignment: .leading) {
       
-      Text("Popular Game")
-        .font(.system(size: 16))
+      Text("Games you must try")
+        .font(.custom("Arial Rounded MT Bold", size: 16.0))
         .bold()
         .padding(EdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16))
       
@@ -172,13 +189,50 @@ extension HomeView {
             self.presenter.game
           ) { game in
             ZStack {
-              //              self.presenter.linkBuilder(for: tourism) {
-              HomePopularRow(game: game, presenter: presenter)
-                .buttonStyle(PlainButtonStyle())
+              self.presenter.linkBuilder(for: game) {
+                HomePopularRow(game: game, presenter: presenter)
+                  .buttonStyle(PlainButtonStyle())
+              }
             }
           }
         }.padding()
       }
+    }
+  }
+  
+  var byNewest: some View {
+    
+    VStack(alignment: .leading) {
+      
+      Text("New coming game")
+        .font(.custom("Arial Rounded MT Bold", size: 16.0))
+        .bold()
+        .padding(EdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16))
+      
+      VStack(spacing: 20) {
+        
+        List(self.presenter.newestGame) { newestGame in
+          
+          VStack {
+            self.presenter.linkBuilder(for: newestGame) {
+              HomeNewestRow(game: newestGame, presenter: presenter)
+                .buttonStyle(PlainButtonStyle())
+            }
+          }
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+        .hasScrollEnabled(false)
+        .frame(height: CGFloat(self.presenter.newestGame.count) * 100)
+        
+        Button(action: {
+          
+          self.presenter.getNewestGame(isLoadMore: true)
+        }) {
+            Text("Load more")
+              .font(.custom("Arial Rounded MT Bold", size: 13.0))
+        }
+        
+      }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
     }
   }
 }

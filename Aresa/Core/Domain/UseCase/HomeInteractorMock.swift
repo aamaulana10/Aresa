@@ -10,7 +10,8 @@ import Combine
 
 protocol HomeUseCaseMock {
     
-    func getGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
+    func getHighlightGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
+    func getNewestGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
     func verify() -> Bool
 }
 
@@ -25,11 +26,16 @@ class HomeInteractorMock: HomeUseCaseMock {
   
   var functionWasCalled = false
   
-  func getGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
+  func getHighlightGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
       
       functionWasCalled = true
       
-      return repository.getGame(page: page, pageSize: pageSize)
+      return repository.getHighlightGame(page: page, pageSize: pageSize)
+  }
+  
+  func getNewestGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
+    
+    return repository.getNewestGame(page: page, pageSize: pageSize)
   }
 
   func verify() -> Bool {
