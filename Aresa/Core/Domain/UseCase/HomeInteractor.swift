@@ -12,6 +12,7 @@ protocol HomeUseCase {
   
   func getHighlightGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
   func getNewestGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error>
+  func searchGame(page: Int, pageSize: Int, query: String) -> AnyPublisher<[GameModel], Error>
 }
 
 class HomeInteractor: HomeUseCase {
@@ -31,6 +32,11 @@ class HomeInteractor: HomeUseCase {
   func getNewestGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
     
     return repository.getNewestGame(page: page, pageSize: pageSize)
+  }
+  
+  func searchGame(page: Int, pageSize: Int, query: String) -> AnyPublisher<[GameModel], Error> {
+    
+    return repository.searchGame(page: page, pageSize: pageSize, query: query)
   }
   
 }

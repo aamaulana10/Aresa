@@ -222,7 +222,7 @@ extension HomeView {
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         .hasScrollEnabled(false)
-        .frame(height: CGFloat(self.presenter.newestGame.count) * 100)
+        .frame(height: CGFloat(self.presenter.newestGame.count) * 120)
         
         Button(action: {
           

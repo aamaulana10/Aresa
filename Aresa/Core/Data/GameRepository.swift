@@ -63,24 +63,37 @@ extension GameRepository: GameRepositoryProtocol {
   
   func getNewestGame(page: Int, pageSize: Int) -> AnyPublisher<[GameModel], Error> {
     
-    return self.locale.getNewestGame()
+    return self.remote.getNewestGame(page: page, pageSize: pageSize)
       .flatMap { result -> AnyPublisher<[GameModel], Error> in
+        
         if result.isEmpty {
-          return self.remote.getNewestGame(page: page, pageSize: pageSize)
-            .map { GameMapper.mapGameResponsesToDomains(input: $0) }
-            .map { GameMapper.mapGameResponsesToNewestEntities(input: $0) }
-            .flatMap { self.locale.addNewestGame(from: $0) }
-            .filter { $0 }
-            .flatMap { _ in self.locale.getNewestGame()
-              .map { GameMapper.mapGameNewestEntitiesToDomains(input: $0) }
-            }.eraseToAnyPublisher()
           
-        } else {
           return self.locale.getNewestGame()
             .map { GameMapper.mapGameNewestEntitiesToDomains(input: $0) }
             .eraseToAnyPublisher()
+          
+        } else {
+          
+        return self.locale.addNewestGame(from: GameMapper.mapGameResponsesToNewestEntities(input: GameMapper.mapGameResponsesToDomains(input: result)))
+            .filter { $0 }
+            .flatMap { _ in self.locale.getNewestGame()
+              .map {
+                GameMapper.mapGameNewestEntitiesToDomains(input: $0) }
+            }.eraseToAnyPublisher()
+          
         }
+        
       }.eraseToAnyPublisher()
+      .catch { error -> AnyPublisher<[GameModel], Error> in
+        
+        print("error catch on repo", error)
+        
+        return self.locale.getNewestGame()
+          .map { GameMapper.mapGameNewestEntitiesToDomains(input: $0) }
+          .eraseToAnyPublisher()
+        
+      }
+      .eraseToAnyPublisher()
   }
   
   func searchGame(page: Int, pageSize: Int, query: String) -> AnyPublisher<[GameModel], Error> {

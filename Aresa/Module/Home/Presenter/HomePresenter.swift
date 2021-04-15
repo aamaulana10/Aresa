@@ -13,7 +13,7 @@ class HomePresenter: ObservableObject {
   private let router = HomeRouter()
   private let homeUseCase: HomeUseCase
   @Published  var page = 1
-  private var pageSize = 10
+  private var pageSize = 3
   
   @Published var game: [GameModel] = []
   @Published var newestGame: [GameModel] = []
@@ -58,7 +58,6 @@ class HomePresenter: ObservableObject {
       self.page = 1
     }
     
-    loadingState = true
     homeUseCase.getNewestGame(page: page, pageSize: pageSize)
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { completion in
@@ -72,11 +71,18 @@ class HomePresenter: ObservableObject {
         
         if isLoadMore == true {
           
-          self.newestGame.append(contentsOf: data)
+          for game in data {
+            
+            if !self.newestGame.contains(where: { $0.id == game.id }) {
+              self.newestGame.append(game)
+              }
+          }
           
         } else {
           
-          self.newestGame = data
+          let limitArray = data.prefix(5)
+          
+          self.newestGame = Array(limitArray)
           
         }
         

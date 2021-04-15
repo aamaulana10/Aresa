@@ -44,12 +44,12 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
         
         return Future<[GameEntity], Error> { completion in
             if let realm = self.realm {
-                let Games: Results<GameEntity> = {
+                let games: Results<GameEntity> = {
                     realm.objects(GameEntity.self)
                         .sorted(byKeyPath: "name", ascending: true)
                 }()
                 
-                completion(.success(Games.toArray(ofType: GameEntity.self)))
+                completion(.success(games.toArray(ofType: GameEntity.self)))
             } else {
                 completion(.failure(DatabaseError.invalidInstance))
             }
@@ -57,15 +57,15 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
     }
     
     func addGame(
-        from Game: [GameEntity]
+        from game: [GameEntity]
     ) -> AnyPublisher<Bool, Error> {
         
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
                 do {
                     try realm.write {
-                        for Game in Game {
-                            realm.add(Game, update: .all)
+                        for game in game {
+                            realm.add(game, update: .all)
                         }
                         completion(.success(true))
                     }
@@ -82,12 +82,12 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
       
       return Future<[GameNewestEntity], Error> { completion in
           if let realm = self.realm {
-              let Games: Results<GameNewestEntity> = {
+              let games: Results<GameNewestEntity> = {
                   realm.objects(GameNewestEntity.self)
                       .sorted(byKeyPath: "name", ascending: true)
               }()
               
-              completion(.success(Games.toArray(ofType: GameNewestEntity.self)))
+              completion(.success(games.toArray(ofType: GameNewestEntity.self)))
           } else {
               completion(.failure(DatabaseError.invalidInstance))
           }
@@ -95,15 +95,15 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
   }
   
   func addNewestGame(
-      from Game: [GameNewestEntity]
+      from game: [GameNewestEntity]
   ) -> AnyPublisher<Bool, Error> {
       
       return Future<Bool, Error> { completion in
           if let realm = self.realm {
               do {
                   try realm.write {
-                      for Game in Game {
-                          realm.add(Game, update: .all)
+                      for game in game {
+                          realm.add(game, update: .all)
                       }
                       completion(.success(true))
                   }
@@ -165,12 +165,12 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
         
         return Future<[GameFavoriteEntity], Error> { completion in
             if let realm = self.realm {
-                let Games: Results<GameFavoriteEntity> = {
+                let games: Results<GameFavoriteEntity> = {
                     realm.objects(GameFavoriteEntity.self)
                         .sorted(byKeyPath: "name", ascending: true)
                 }()
                 
-                completion(.success(Games.toArray(ofType: GameFavoriteEntity.self)))
+                completion(.success(games.toArray(ofType: GameFavoriteEntity.self)))
             } else {
                 completion(.failure(DatabaseError.invalidInstance))
             }

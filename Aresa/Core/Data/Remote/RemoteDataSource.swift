@@ -58,9 +58,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
          AF.request(url)
            .validate()
            .responseDecodable(of: GameResponse.self) { response in
-            
-            print("response ", response)
-            
+        
              switch response.result {
              case .success(let value):
               completion(.success(value.results))
